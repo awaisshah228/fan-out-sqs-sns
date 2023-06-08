@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    environment: 
+      - AWS_DEFAULT_REGION=us-east-2
+      - EDGE_PORT=4566
+      - SERVICES=dynamodb,sns,sqs  # Add SNS and SQS to the SERVICES environment variable
+    ports:
+      - "4566:4566"
+    networks:
+      - backend
+networks:
+  backend:
