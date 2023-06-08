@@ -52,6 +52,7 @@ const createSQSQueue = async (queueName) => {
     QueueName: queueName,
     Attributes: {
       VisibilityTimeout: '30', // Optional: Set the visibility timeout in seconds
+      MessageRetentionPeriod: '1800', 
     },
   });
 
