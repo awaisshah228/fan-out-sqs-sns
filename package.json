@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon createScript.js",
     "pub":"nodemon publisher.js",
     "poll": "nodemon poller.js"
   },

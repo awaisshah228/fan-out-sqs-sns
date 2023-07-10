@@ -11,5 +11,9 @@ services:
       - "4566:4566"
     networks:
       - backend
+    volumes:
+      - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./localstack_bootstrap/sqs_bootstrap.sh:/etc/localstack/init/ready.d/sqs_bootstrap.sh/
 networks:
   backend:
