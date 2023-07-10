@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon createScript.js",
-    "pub":"nodemon publisher.js",
-    "poll": "nodemon poller.js"
+    "pub":"node publisher.js",
+    "poll": "node poller.js"
   },
   "dependencies": {
     "@aws-sdk/client-sns": "^3.348.0",
